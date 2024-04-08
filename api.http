@@ -1,0 +1,31 @@
+POST http://localhost:3000/events
+Content-Type: application/json
+
+{
+    "title": true,
+    "details": "The event about rock and games",
+    "maximumAttendees": 2
+}
+
+###
+POST http://localhost:3000/events/ae7bbf55-74e7-4a51-bafd-551d7a05b949/attendees
+Content-Type: application/json
+
+{
+    "name": "Marcelo Deus",
+    "email": "jzmarcelodeus98@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/events/ae7bbf55-74e7-4a51-bafd-551d7a05b949
+
+###
+
+GET http://localhost:3000/attendees/3/badge
+
+###
+GET http://localhost:3000/attendees/3/check-in
+
+###
+GET http://localhost:3000/events/ae7bbf55-74e7-4a51-bafd-551d7a05b949/attendees?query=deus
